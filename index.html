@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="pl-4 bg-dark">
+    <head>
+        <title>a exercices</title>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+        <link rel="stylesheet" href="bootstrap.css">
+        <script src="bootstrap.js"></script>
+    </head>
+    <body class="bg-primary border-left border-primary">
+        <div id="ccvv" class="text-center" style="min-width: 300px">
+            <transition name="loading">
+                <div v-if="load==false" class="bg-dark position absolute w-100 f-centrar" style="height:100vh; z-index: 2000;"><div class="lds-dual-ring"style="margin:auto"></div></div>
+            </transition>   
+            <div class="pt-3" v-if="load==true && cv==true">
+
+                <h1 class="text-white text-center">SOBRE MI</h1>
+                <div name="sobremi" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in sobreMi" v-bind:key="index +-1">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+
+                <BR><BR>
+                <h1 class="text-white text-center">EXPERIENCIA</h1>
+                <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in experiencia" v-bind:key="index+0">
+                    {{campo}}
+                </div>
+                
+                <BR><BR>
+                <h1 class="text-white text-center">EDUCACION</h1>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.primaria" v-bind:key="index+campo+1">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.eso" v-bind:key="index+campo+2">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.bachiller" v-bind:key="index+campo+3">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.b2" v-bind:key="index+campo+4">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+
+                <BR><BR>
+                    <h1 class="text-white text-center">PROYECTOS</h1>
+                    <div name="project" class=" flex-wrap w-50 overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                    >
+                        <img v-on:click="modal('book')" src="book.jpg" class="m-5" style="width:100px">
+                        <img v-on:click="modal('chess')" src="chess.jpg" class="m-5" style="width:100px">
+                        <img v-on:click="modal('fate')" src="fate.jpg" class="m-5" style="width:100px">
+                        <img v-on:click="modal('pong')" src="pong.jpg" class="m-5" style="width:100px">
+                        
+                    </div>
+                <BR><BR>
+                    <h1 class="text-white text-center">HABILIDADES</h1>
+                    <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                    v-for="(campo,index) in skills.habilidades" v-bind:key="index">
+                        {{campo}}
+                    </div>
+
+                    <BR><BR>
+                        <h1 class="text-white text-center">IDIOMAS</h1>
+                        <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                        v-for="(campo,index) in idiomas" v-bind:key="index+9">
+                            {{campo}}
+                        </div>
+            </div>
+            <div class="pt-3" v-if="load==true && cv==false">
+
+                <h1 class="text-white text-center">ABOUT ME</h1>
+                <div name="sobremi" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in sobreMi" v-bind:key="index +-1">
+                    {{index.toUpperCase()}} - {{campo}}
+                </div>
+
+                <BR><BR>
+                <h1 class="text-white text-center">EXPERIENCE</h1>
+                <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in experiencia" v-bind:key="index+0">
+                    {{campo}}
+                </div>
+                
+                <BR><BR>
+                <h1 class="text-white text-center">EDUCATION</h1>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.primaria" v-bind:key="index+campo+1">
+                    {{index.toUpperCase()}} - <i>{{campo}}</i>
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.eso" v-bind:key="index+campo+2">
+                    {{index.toUpperCase()}} - <i>{{campo}}</i>
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.bachiller" v-bind:key="index+campo+3">
+                    {{index.toUpperCase()}} - <i>{{campo}}</i>
+                </div>
+                <div name="educacion" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                v-for="(campo,index) in educacion.b2" v-bind:key="index+campo+4">
+                    {{index.toUpperCase()}} - <i>{{campo}}</i>
+                </div>
+
+                <BR><BR>
+                <h1 class="text-white text-center">PROJECTS</h1>
+                <div name="project" class=" flex-wrap w-50 overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                >
+                    <img v-on:click="modal('book')" src="book.jpg" class="m-5" style="width:100px">
+                    <img v-on:click="modal('chess')" src="chess.jpg" class="m-5" style="width:100px">
+                    <img v-on:click="modal('fate')" src="fate.jpg" class="m-5" style="width:100px">
+                    <img v-on:click="modal('pong')" src="pong.jpg" class="m-5" style="width:100px">
+                    
+                </div>
+
+                <BR><BR>
+                    <h1 class="text-white text-center">SKILLS</h1>
+                    <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                    v-for="(campo,index) in skills.habilidades" v-bind:key="index">
+                        {{campo}}
+                    </div>
+
+                    <BR><BR>
+                        <h1 class="text-white text-center">LANGUAGES</h1>
+                        <div name="experiencia" class="overflow-auto bg-primary w-100 min-vw-100 d-flex justify-content-center text-white pt-3"
+                        v-for="(campo,index) in idiomas" v-bind:key="index+9">
+                            {{campo}}
+                        </div>
+            </div>
+            <div v-if="load" class="w-25 no-padding sticky-bottom" @mouseover="mouseOver" v-on:mouseleave="mouseOut" style="height:100vh; min-width: 260px;">
+                <transition name="slide">
+                    <nav v-if="sideBar" class="navbar navbar-dark bg-dark navbar-expand-lg w-100 h-100
+                    d-flex flex-column justify-content-around sticky-top
+                    ">  
+                        <a class="m-0 navbar-brand" href="#" style="font-size: 2rem;">Curriculum</a>
+                        <img src="face.png" class="m-0 navbar-brand rounded-circle" style="width:100px"></img>
+                        <div class="text-white text-center" v-if="cv">
+                            <p class="w-100">Sobre Mi</p>
+                            <p class="">Experiencia</p>
+                            <p class="">Educacion</p>
+                            <p class="">Habilidades</p>
+                            <p>Proyectos</p>
+                            <p>Idiomas</p>
+                        </div>
+                        <div class="text-white text-center" v-if="cv==false">
+                            <p class="w-100">About Me</p>
+                            <p class="">Experience</p>
+                            <p class="">Education</p>
+                            <p class="">Skills</p>
+                            <p>Projects</p>
+                            <p>Languages</p>
+                        </div>
+                        <label v-if="cv" class="text-white">Cambiar Idioma</label>
+                        <label v-if="cv==false" class="text-white">Change Language</label>
+                        <label class="switch">
+                            <input @change="cambioIdioma" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </nav>
+                </transition>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

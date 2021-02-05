@@ -1,0 +1,154 @@
+{
+    "esp":{
+        "sobreMi":{
+            "nombre":"Alberto",
+            "apellidos":"Camacho Guerrero",
+            "e-mail":"albertoc27g@gmail.com",
+            "tlf":"663 28 96 28",
+            "youtube":"https://www.youtube.com/ channel/ UC5QOyT5m_kmbuv5UERgzNcw",
+            "twitter":"https://twitter.com/Euclashh",
+            "github":"https://github.com/AlbertoCamachoG",
+            "linkedin":"https://www.linkedin.com/in/euclashh-camacho-41244a176/",
+            "presentacion":"Estudiante de 19 años preparandose para entrar al mercado laboral en el campo de programador web"
+        },
+        "experiencia":{
+            "work":"Sin experiencia laboral"
+        },
+        "educacion":{
+            "primaria":{
+                "nombre":"Educación Primaria",
+                "fecha":"2013",
+                "lugar":"I.E.S. Las Mimbres"
+            },
+            "eso":{
+                "nombre":"Educación Secundaria Obligatoria",
+                "fecha":"2017",
+                "lugar":"I.E.S. Manuel de Falla"
+            },
+            "bachiller":{
+                "nombre":"Bachillerato de Ciencias Puras",
+                "fecha":"2019",
+                "lugar":"I.E.S. Manuel de Falla"
+            },
+            "b2":{
+                "nombre":"First Certificate in English(FCE)",
+                "fecha":"3/9/2018",
+                "lugar":"Afterschool Academy"
+            }
+        },
+        "skills":{
+            "habilidades":["JAVA","JS","HTML","CSS","VUEJS","BOOTSTRAP"]
+        },
+        "projects":{
+            "ajedrez":{
+                "maket":{
+                    "name":"Chess",
+                    "url":"https://github.com/AlbertoCamachoG/Chess",
+                    "description":"Mi primer juego en JS, es un ajedrez"
+                },
+                "img":"chess.jpg"
+            },
+            "libreria":{
+                "maket":{
+                    "name":"Library",
+                    "url":"https://github.com/AlbertoCamachoG/Library_u_Ajax",
+                    "description":"Libreria donde puedo registrar novelas que he leido con peticiones ajax"
+                },
+                "img":"book.jpg"
+            },
+            "fate":{
+                "maket":{
+                    "name":"Fate",
+                    "url":"https://github.com/AlbertoCamachoG/FateApiPractice",
+                    "description":"Prueba de uso de ajax junto a una api"
+                },
+                "img":"fate.jpg"
+            },
+            "pong":{
+                "maket":{
+                    "name":"Pong",
+                    "url":"https://github.com/AlbertoCamachoG/Pong",
+                    "description":"Juego pong con svg"
+                },
+                "img":"pong.jpg"
+            }
+        },
+        "idiomas":["Español","Ingles"]
+    },
+    "ing":{
+        "sobreMi":{
+            "name":"Alberto",
+            "surname":"Camacho Guerrero",
+            "e-mail":"albertoc27g@gmail.com",
+            "tlf":"663 28 96 28",
+            "youtube":"https://www.youtube.com/ channel/ UC5QOyT5m_kmbuv5UERgzNcw",
+            "twitter":"https://twitter.com/Euclashh",
+            "github":"https://github.com/AlbertoCamachoG",
+            "linkedin":"https://www.linkedin.com/in/euclashh-camacho-41244a176/",
+            "About_me":"Estudiante de 19 años preparandose para entrar al mercado laboral en el campo de programador web"
+        },
+        "experiencia":{
+            "work":"No laboral experience"
+        },
+        "educacion":{
+            "primaria":{
+                "name":"Educación Primaria",
+                "date":"2013",
+                "place":"I.E.S. Las Mimbres"
+            },
+            "eso":{
+                "name":"Educación Secundaria Obligatoria",
+                "date":"2017",
+                "place":"I.E.S. Manuel de Falla"
+            },
+            "bachiller":{
+                "name":"Bachillerato de Ciencias Puras",
+                "date":"2019",
+                "place":"I.E.S. Manuel de Falla"
+            },
+            "b2":{
+                "name":"First Certificate in English(FCE)",
+                "date":"3/9/2018",
+                "place":"Afterschool Academy"
+            }
+        },
+        "skills":{
+            "habilidades":["JAVA","JS","HTML","CSS","VUEJS","BOOTSTRAP"]
+        },
+        "projects":{
+            "ajedrez":{
+                "maket":{
+                    "name":"Chess",
+                    "url":"https://github.com/AlbertoCamachoG/Chess",
+                    "description":"Mi first game on JS, it's chess"
+                },
+                "img":"chess.jpg"
+            },
+            "libreria":{
+                "maket":{
+                    "name":"Library",
+                    "url":"https://github.com/AlbertoCamachoG/Library_u_Ajax",
+                    "description":"A library where i can register novels I've read with ajax petitions"
+                },
+                "img":"book.jpg"
+            },
+            "fate":{
+                "maket":{
+                    "name":"Fate",
+                    "url":"https://github.com/AlbertoCamachoG/FateApiPractice",
+                    "description":"Attempt to use ajax alongside an api"
+                },
+                "img":"fate.jpg"
+            },
+            "pong":{
+                "maket":{
+                    "name":"Pong",
+                    "url":"https://github.com/AlbertoCamachoG/Pong",
+                    "description":"Game of Pong with svg"
+                },
+                "img":"pong.jpg"
+            }
+        },
+        "idiomas":["Spanish","English"]
+    }
+}
